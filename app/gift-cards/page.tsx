@@ -1,5 +1,3 @@
-import { SiteFooter } from "@/components/site-footer"
-import { SiteHeader } from "@/components/site-header"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -31,7 +29,7 @@ export default function GiftCardsPage() {
             </p>
             <div className="relative w-full max-w-md mx-auto lg:mx-0 aspect-[3/2] rounded-lg shadow-xl overflow-hidden border-2 border-brand-deep-red">
               <Image
-                src="/placeholder.svg?height=400&width=600"
+                src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=600&h=400&fit=crop&crop=center"
                 alt="Gift Card"
                 layout="fill"
                 objectFit="cover"

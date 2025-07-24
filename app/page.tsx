@@ -20,7 +20,7 @@ export default function HomePage() {
         {/* Chef's Quote / Mission Statement */}
         <section className="relative w-full py-24 md:py-32 bg-brand-warm-brown text-brand-cream overflow-hidden">
           <Image
-            src="/placeholder.svg?height=800&width=1200"
+            src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=1200&h=800&fit=crop&crop=center"
             alt="Chef at work"
             layout="fill"
             objectFit="cover"
@@ -80,13 +80,22 @@ export default function HomePage() {
               beautiful moments.
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
-              {[...Array(8)].map((_, i) => (
+              {[
+                "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=300&h=300&fit=crop&crop=center",
+                "https://images.unsplash.com/photo-1559847844-d721426d6edc?w=300&h=300&fit=crop&crop=center",
+                "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=300&h=300&fit=crop&crop=center",
+                "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=300&h=300&fit=crop&crop=center",
+                "https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=300&h=300&fit=crop&crop=center",
+                "https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=300&h=300&fit=crop&crop=center",
+                "https://images.unsplash.com/photo-1544025162-d76694265947?w=300&h=300&fit=crop&crop=center",
+                "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=300&h=300&fit=crop&crop=center",
+              ].map((src, i) => (
                 <div
                   key={i}
                   className="relative w-full aspect-square bg-brand-warm-brown rounded-lg overflow-hidden group"
                 >
                   <Image
-                    src={`/placeholder.svg?height=300&width=300&query=instagram food post ${i + 1}`}
+                    src={src}
                     alt={`Instagram Post ${i + 1}`}
                     layout="fill"
                     objectFit="cover"

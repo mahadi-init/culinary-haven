@@ -1,5 +1,3 @@
-import { SiteFooter } from "@/components/site-footer"
-import { SiteHeader } from "@/components/site-header"
 import {
   Accordion,
   AccordionContent,
@@ -173,7 +171,7 @@ export default function ContactPage() {
                 <div className="w-full h-60 bg-brand-olive-green rounded-lg overflow-hidden mt-8">
                   {/* Placeholder for Google Map */}
                   <Image
-                    src="/placeholder.svg"
+                    src="https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?w=400&h=240&fit=crop&crop=center"
                     alt="Restaurant Location Map"
                     width={400}
                     height={240}

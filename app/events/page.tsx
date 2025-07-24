@@ -91,13 +91,22 @@ export default function EventsPage() {
               Memories from Past Events
             </h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-              {[...Array(8)].map((_, i) => (
+              {[
+                "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=300&fit=crop&crop=center",
+                "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=300&h=300&fit=crop&crop=center",
+                "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=300&h=300&fit=crop&crop=center",
+                "https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=300&h=300&fit=crop&crop=center",
+                "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=300&h=300&fit=crop&crop=center",
+                "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=300&h=300&fit=crop&crop=center",
+                "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=300&h=300&fit=crop&crop=center",
+                "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=300&h=300&fit=crop&crop=center",
+              ].map((src, i) => (
                 <div
                   key={i}
                   className="relative w-full aspect-square rounded-lg overflow-hidden shadow-md group"
                 >
                   <Image
-                    src={`/placeholder.svg?height=300&width=300&query=past event photo ${i + 1}`}
+                    src={src}
                     alt={`Past Event Photo ${i + 1}`}
                     layout="fill"
                     objectFit="cover"

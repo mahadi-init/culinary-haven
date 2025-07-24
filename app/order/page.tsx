@@ -1,7 +1,8 @@
-import { SiteHeader } from "@/components/site-header"
-import { SiteFooter } from "@/components/site-footer"
 import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import {
   Select,
   SelectContent,
@@ -9,14 +10,11 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
-import { Label } from "@/components/ui/label"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
 import { menuItems } from "@/data"
+import { Clock, CreditCard, MapPin, Minus, Plus, Trash2 } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import { Plus, Minus, Trash2, MapPin, Clock, CreditCard } from "lucide-react"
 
 export default function OnlineOrderingPage() {
   // Mock state for cart items (in a real app, this would be managed with React state or a global store)
@@ -28,7 +26,7 @@ export default function OnlineOrderingPage() {
   const subtotal = cartItems.reduce(
     (sum, item) =>
       sum + Number.parseFloat(item.price.replace("$", "")) * item.quantity,
-    0,
+    0
   )
   const tax = subtotal * 0.08 // Example 8% tax
   const deliveryFee = 5.0 // Example delivery fee
@@ -249,7 +247,7 @@ export default function OnlineOrderingPage() {
                     <div className="w-full h-32 bg-brand-olive-green rounded-lg overflow-hidden">
                       {/* Placeholder for Google Map integration */}
                       <Image
-                        src="/placeholder.svg"
+                        src="https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?w=300&h=128&fit=crop&crop=center"
                         alt="Delivery Zone Map"
                         width={300}
                         height={128}

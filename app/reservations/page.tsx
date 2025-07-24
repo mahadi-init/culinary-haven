@@ -1,9 +1,13 @@
 "use client"
 
-import { SiteHeader } from "@/components/site-header"
-import { SiteFooter } from "@/components/site-footer"
 import { Button } from "@/components/ui/button"
-import { Textarea } from "@/components/ui/textarea"
+import { Calendar } from "@/components/ui/calendar"
+import { Label } from "@/components/ui/label"
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover"
 import {
   Select,
   SelectContent,
@@ -11,18 +15,12 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-import { Label } from "@/components/ui/label"
-import { Calendar } from "@/components/ui/calendar"
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover"
-import { CalendarIcon, Users, Utensils, MessageSquare } from "lucide-react"
+import { Textarea } from "@/components/ui/textarea"
 import { format } from "date-fns"
-import React from "react"
+import { CalendarIcon, MessageSquare, Users, Utensils } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import React from "react"
 
 export default function ReservationsPage() {
   const [date, setDate] = React.useState<Date | undefined>(new Date())
@@ -56,7 +54,7 @@ export default function ReservationsPage() {
               you.
             </p>
             <Image
-              src="/placeholder.svg?height=500&width=700"
+              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=700&h=500&fit=crop&crop=center"
               alt="Restaurant Dining Area"
               width={700}
               height={500}
@@ -83,7 +81,9 @@ export default function ReservationsPage() {
                   <PopoverTrigger asChild>
                     <Button
                       variant="outline"
-                      className={`w-full justify-start text-left font-normal bg-brand-cream/50 border-brand-warm-brown/30 text-brand-warm-brown ${!date && "text-muted-foreground"}`}
+                      className={`w-full justify-start text-left font-normal bg-brand-cream/50 border-brand-warm-brown/30 text-brand-warm-brown ${
+                        !date && "text-muted-foreground"
+                      }`}
                     >
                       <CalendarIcon className="mr-2 h-4 w-4" />
                       {date ? format(date, "PPP") : <span>Pick a date</span>}

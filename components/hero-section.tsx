@@ -1,12 +1,12 @@
-import Link from "next/link"
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
+import Link from "next/link"
 
 export function HeroSection() {
   return (
     <section className="relative w-full h-[600px] md:h-[700px] lg:h-[800px] xl:h-[900px] flex items-center justify-center text-center overflow-hidden">
       <Image
-        src="/placeholder.svg?height=1000&width=1920"
+        src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1920&h=1000&fit=crop&crop=center"
         alt="Restaurant Interior Hero"
         layout="fill"
         objectFit="cover"
@@ -14,13 +14,15 @@ export function HeroSection() {
         className="absolute inset-0 z-0 animate-fade-in"
         priority
       />
-      <div className="absolute inset-0 bg-black/50 z-10"></div> {/* Overlay for text readability */}
+      <div className="absolute inset-0 bg-black/50 z-10"></div>{" "}
+      {/* Overlay for text readability */}
       <div className="relative z-20 text-brand-cream space-y-6 px-4 md:px-6 max-w-4xl">
         <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold leading-tight animate-slide-in-up">
           Savor the Art of Fine Dining
         </h1>
         <p className="text-lg md:text-xl lg:text-2xl font-light max-w-2xl mx-auto animate-fade-in-delay">
-          Experience exquisite flavors, unparalleled service, and an ambiance that delights all senses.
+          Experience exquisite flavors, unparalleled service, and an ambiance
+          that delights all senses.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4 animate-fade-in-delay-2">
           <Button

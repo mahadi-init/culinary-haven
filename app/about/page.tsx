@@ -1,8 +1,6 @@
-import { SiteHeader } from "@/components/site-header"
-import { SiteFooter } from "@/components/site-footer"
-import Image from "next/image"
 import { TeamMember, teamMembers } from "@/data"
 import { History, Leaf, Sparkles } from "lucide-react"
+import Image from "next/image"
 
 // Component for a single team member card
 function TeamMemberCard({ member }: { member: TeamMember }) {
@@ -44,7 +42,7 @@ export default function AboutPage() {
           {/* Full-screen team photo or behind-the-scenes video (Placeholder) */}
           <section className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] rounded-lg overflow-hidden shadow-xl mb-16">
             <Image
-              src="/placeholder.svg?height=600&width=1200"
+              src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&h=600&fit=crop&crop=center"
               alt="Our Team"
               layout="fill"
               objectFit="cover"
